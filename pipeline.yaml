@@ -1,14 +1,29 @@
 ---
+resources:
+  - name: concourse_cypress
+    type: git
+    source:
+      uri: https://github.com/EdmundHusserl/concourse_cypress.git
+      branch: master
+
 jobs:
-  - name: job-hello-world
+  - name: cypress
     public: true
     plan:
-      - task: hello-world
+      - get: concourse_cypress
+      - task: run_tests
         config:
           platform: linux
           image_resource:
             type: docker-image
-            source: {repository: busybox}
+            source: {repository: cypress/base}
+          inputs:
+            - name: concourse_cypress
           run:
-            path: echo
-            args: [hello world]
+            path: /bin/bash
+            args: 
+              - -exc
+              - |
+                cd concourse_cypress
+                npm i
+                npx cypress run --browser chrome
