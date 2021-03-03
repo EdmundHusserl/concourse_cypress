@@ -26,4 +26,4 @@ jobs:
               - |
                 cd concourse_cypress
                 npm i
-                npx cypress run --browser chrome
+                npx cypress run 

@@ -2,7 +2,7 @@ const { describe } = require("mocha");
 
 describe("New test", () => {
     beforeEach(() => {
-        cy.visit("http://localhost:3000")
+        cy.visit("/")
     })
     it.only("assert input are already there", () => {
         let selector;
