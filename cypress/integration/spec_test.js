@@ -9,16 +9,8 @@ describe("New test", () => {
         let value;
         const data = [
             {
-                selector: "input[name=firstName]", 
-                value: "Jorge"  
-            },
-            {
-                selector: "input[name=lastName]",
-                value: "Pemjean-Letelier"
-            },
-            {
-                selector: "input[name=age]",
-                value: 36
+                selector: "#searchInput", 
+                value: "Roger Federer"  
             }
         ];
         data.forEach( (obj) => {

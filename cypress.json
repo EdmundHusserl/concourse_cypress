@@ -1,0 +1,4 @@
+{
+    "baseUrl": "https://en.wikipedia.org/wiki/Main_Page",
+    "defaultCommandTimeout": 10000
+}

@@ -10,5 +10,10 @@
     "cypress"
   ],
   "author": "JPL",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.1",
+    "cypress": "^6.6.0",
+    "mocha": "^8.3.0"
+  }
 }
